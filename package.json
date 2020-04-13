@@ -8,7 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "hydro-sdk": "github:chgibb/hydro-sdk"
   }
 }
