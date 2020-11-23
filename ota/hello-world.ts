@@ -5,9 +5,10 @@ import {
     StatelessWidget,
     Text,
     Container,
-    TextEditingController
+    TextEditingController,
+    Center
 } from "hydro-sdk/runtime/flutter/widgets/index";
-import { MaterialApp } from "hydro-sdk/runtime/flutter/material/index";
+import { MaterialApp, Scaffold } from "hydro-sdk/runtime/flutter/material/index";
 import { Widget } from "hydro-sdk/runtime/flutter/widget";
 import { Key } from "hydro-sdk/runtime/flutter/foundation/key";
 
@@ -20,10 +21,17 @@ class MyWidget extends StatelessWidget {
     public build(): Widget {
         console.log(this.controller.getText().toLowerCase());
         return new MaterialApp({
-            home: new Container({
-                key: new Key(this.controller.getText().toLowerCase()),
-                child: new Text("Hello world!")
-            })
+            home:
+                new Scaffold({
+                    body:
+                        new Center({
+                            child:
+                                new Container({
+                                    key: new Key(this.controller.getText().toLowerCase()),
+                                    child: new Text("Hello world!")
+                                })
+                        })
+                })
         });
     }
 }
