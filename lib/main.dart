@@ -1,8 +1,13 @@
-import 'package:flutter/material.dart';
+import 'package:hydro_sdk/hc.g.dart';
 import 'package:hydro_sdk/runFromNetwork.dart';
+import 'package:flutter/material.dart';
 
-//Hotel booking is a line for line port of https://github.com/cybdom/hotel_booking_ui
-void main() => runApp(RunFromNetwork(
-    baseUrl:
-        "https://github.com/chgibb/hydro-sdk/raw/master/dist/hotel-booking.hc"));
-
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(RunFromNetwork(
+    thunks: thunks,
+    args: [],
+    baseUrl: "https://github.com/hydro-sdk/hydro_demo/raw/master/assets",
+    filePath: "hello-world.hc",
+  ));
+}
