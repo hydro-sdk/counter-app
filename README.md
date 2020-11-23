@@ -20,9 +20,9 @@ Its important that Hydro-SDK is included as a `dependency` and NOT a `devDepende
 
 Once Hydro-SDK is mature enough, it will be available as separate packages.
 
-The provided `hello-world.ts` file can be compiled into a bytecode image to `assets/hello-world.hc` by running
+The provided `ota/hello-world.ts` file can be compiled into a bytecode image to `assets/hello-world.hc` by running
 ```
- node node_modules/hydro-sdk/dist/compiler -t hello-world.ts -m hello-world -d assets -p debug
+ node node_modules/hydro-sdk/dist/compiler -t ota/hello-world.ts -m hello-world -d assets -p debug
 
 ```
 
