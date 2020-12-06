@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
-    "@hydro-sdk/waveform": "0.0.1-nightly.17",
+    "@hydro-sdk/waveform": "0.0.1-nightly.18",
     "@hydro-sdk/hydro-sdk": "0.0.1-nightly.18"
   }
 }
