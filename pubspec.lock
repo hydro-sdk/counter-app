@@ -49,14 +49,14 @@ packages:
       name: build
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.5.1"
+    version: "1.5.2"
   build_config:
     dependency: transitive
     description:
       name: build_config
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.3"
+    version: "0.4.4"
   build_daemon:
     dependency: transitive
     description:
@@ -70,21 +70,21 @@ packages:
       name: build_resolvers
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.4.3"
+    version: "1.4.4"
   build_runner:
     dependency: transitive
     description:
       name: build_runner
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.10.6"
+    version: "1.10.7"
   build_runner_core:
     dependency: transitive
     description:
       name: build_runner_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.1.1"
+    version: "6.1.2"
   built_collection:
     dependency: transitive
     description:
@@ -161,7 +161,7 @@ packages:
       name: crypto
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.3"
+    version: "2.1.5"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -183,6 +183,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0-nullsafety.1"
+  file:
+    dependency: transitive
+    description:
+      name: file
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.2.1"
   fixnum:
     dependency: transitive
     description:
@@ -206,7 +213,7 @@ packages:
       name: freezed
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.12.2"
+    version: "0.12.3"
   freezed_annotation:
     dependency: transitive
     description:
@@ -214,6 +221,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.12.0"
+  git:
+    dependency: transitive
+    description:
+      name: git
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   glob:
     dependency: transitive
     description:
@@ -234,7 +248,7 @@ packages:
       name: http
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.12.0+4"
+    version: "0.12.2"
   http_multi_server:
     dependency: transitive
     description:
@@ -252,10 +266,19 @@ packages:
   hydro_sdk:
     dependency: "direct main"
     description:
-      path: "node_modules/hydro-sdk"
-      relative: true
-    source: path
+      path: "."
+      ref: "0.0.1-nightly.18"
+      resolved-ref: a089162d04dcbf457f44da376b81fdfd60711ea2
+      url: "git://github.com/hydro-sdk/hydro-sdk.git"
+    source: git
     version: "1.0.0+1"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.16.1"
   io:
     dependency: transitive
     description:
@@ -318,14 +341,14 @@ packages:
       name: node_interop
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.0"
+    version: "1.2.1"
   node_io:
     dependency: transitive
     description:
       name: node_io
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.1"
+    version: "1.2.0"
   package_config:
     dependency: transitive
     description:
@@ -374,7 +397,7 @@ packages:
       name: quiver
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.5"
+    version: "2.1.5"
   recase:
     dependency: transitive
     description:
@@ -407,7 +430,7 @@ packages:
       name: source_gen
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.8"
+    version: "0.9.9"
   source_span:
     dependency: transitive
     description:
@@ -494,6 +517,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0-nullsafety.3"
+  version:
+    dependency: transitive
+    description:
+      path: "."
+      ref: master
+      resolved-ref: ab213d7380c17d452768fab657fb3503d7c5b813
+      url: "git://github.com/hydro-sdk/version"
+    source: git
+    version: "1.2.0"
   watcher:
     dependency: transitive
     description:
@@ -501,6 +533,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.7+15"
+  waveform:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "0.0.1-nightly.17"
+      resolved-ref: "3322f2a2657914dc02e8b4e4dff348c9e1478549"
+      url: "git://github.com/hydro-sdk/waveform.git"
+    source: git
+    version: "0.0.1"
   web_socket_channel:
     dependency: transitive
     description:
@@ -515,5 +556,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.1"
+  yaml_modify:
+    dependency: transitive
+    description:
+      name: yaml_modify
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.3"
 sdks:
   dart: ">=2.10.0 <2.11.0"

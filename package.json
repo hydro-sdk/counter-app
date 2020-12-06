@@ -8,7 +8,9 @@
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {},
   "dependencies": {
-    "hydro-sdk": "github:chgibb/hydro-sdk"
+    "@hydro-sdk/waveform": "0.0.1-nightly.17",
+    "@hydro-sdk/hydro-sdk": "0.0.1-nightly.18"
   }
 }
