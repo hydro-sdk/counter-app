@@ -8,21 +8,30 @@ You'll need both the `npm`, and `flutter` commands available to scaffold the pro
 
 `npm init` will create and manage `package.json` and `package-lock.json`
 
-Hydro-SDK itself is managed through `npm`. Install it by running `npm install --save chgibb/hydro-sdk` .   
-`npm` will clone and save a copy of Hydro-SDK into `node_modules/`. 
+Hydro-SDK itself is managed both through `npm` and `flutter pub`.
 
-The Dart portion of Hydro-SDK is exposed to Flutter by adding the following under `dependencies` in `pubspec.yaml`.
-```
-hydro_sdk:
-    path: ./node_modules/hydro-sdk
-```
+Hydro-SDK publishes to `npm` under both `@latest` and `@nightly` tags here https://www.npmjs.com/package/@hydro-sdk/hydro-sdk
+
+Depend on the latest (currently, nightly) build by adding Hydro-SDK to your `package.json` and `pubspec.yaml`
+```json
+"dependencies": {
+    "@hydro-sdk/hydro-sdk": "0.0.1-nightly.21"
+  }
+  ```
+  ```yaml
+hydro_sdk: 
+    git: 
+      ref: "0.0.1-nightly.21"
+      url: "git://github.com/hydro-sdk/hydro-sdk.git"
+  ```
+
 Its important that Hydro-SDK is included as a `dependency` and NOT a `devDependency` in both `package.json` and `pubspec.yaml`.
 
-Once Hydro-SDK is mature enough, it will be available as separate packages.
+Once Hydro-SDK is mature enough, it will be available as a separate `pub` package.
 
 The provided `ota/hello-world.ts` file can be compiled into a bytecode image to `assets/hello-world.hc` by running
 ```
- node node_modules/hydro-sdk/dist/compiler -t ota/hello-world.ts -m hello-world -d assets -p debug
+ node node_modules/@hydro-sdk/hydro-sdk/dist/compiler -t ota/hello-world.ts -m hello-world -d assets -p debug
 
 ```
 
@@ -37,6 +46,6 @@ Development time hot-reload is only possible when running bytecode over the netw
 ## Debugging
 The following function
 ```typescript
-import {pauseInDebugger} from "hydro-sdk/runtime/dart/developer/debugger";
+import {pauseInDebugger} from "@hydro-sdk/hydro-sdk/runtime/dart/developer/debugger";
 ```
 can be called to cause IDE dev tools to pause execution if the host application is running in debug mode and connected to a debugger. `pauseInDebugger` can optionally take a single argument, the value of which will be inspectable in the connected debugger. This can useful to inspect class layouts at runtime or to step between sequential `pauseInDebugger` calls.
