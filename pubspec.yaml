@@ -5,10 +5,6 @@ dependencies:
   cupertino_icons: "^0.1.2"
   flutter: 
     sdk: "flutter"
-  hydro-sdk: 
-    git: 
-      ref: "0.0.1-nightly.19"
-      url: "git://github.com/hydro-sdk/hydro-sdk.git"
   hydro_sdk: 
     git: 
       ref: "0.0.1-nightly.18"
