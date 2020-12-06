@@ -1,9 +1,9 @@
 name: Build and Test
 
-on: [push, pull_request]	
+on: [push, pull_request]
 
-jobs:	
-  build:	
+jobs:
+  build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
 
     steps:
-    - name: Install Linux dependencies	
+    - name: Install Linux dependencies
       if: startsWith(matrix.os, 'ubuntu')
       run: |
         sudo apt-get update
@@ -58,7 +58,7 @@ jobs:
       run: npm install
       working-directory: hydro_demo
     - name: Build hello-world.ts
-      run: node node_modules/hydro-sdk/dist/compiler -t ota/hello-world.ts -m hello-world -d assets -p debug
+      run: node node_modules/@hydro-sdk/hydro-sdk/dist/compiler -t ota/hello-world.ts -m hello-world -d assets -p debug
       working-directory: hydro_demo
     - name: Test hello-world.ts
       run: flutter test
