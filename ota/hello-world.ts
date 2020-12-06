@@ -1,4 +1,4 @@
-import { runApp } from "hydro-sdk/runtime/flutter/runApp";
+import { runApp } from "@hydro-sdk/hydro-sdk/runtime/flutter/runApp";
 //Make sure to import from /index specifically if using barell imports.
 //The compiler won't resolve /index by itself
 import {
@@ -7,10 +7,10 @@ import {
     Container,
     TextEditingController,
     Center
-} from "hydro-sdk/runtime/flutter/widgets/index";
-import { MaterialApp, Scaffold } from "hydro-sdk/runtime/flutter/material/index";
-import { Widget } from "hydro-sdk/runtime/flutter/widget";
-import { Key } from "hydro-sdk/runtime/flutter/foundation/key";
+} from "@hydro-sdk/hydro-sdk/runtime/flutter/widgets/index";
+import { MaterialApp, Scaffold } from "@hydro-sdk/hydro-sdk/runtime/flutter/material/index";
+import { Widget } from "@hydro-sdk/hydro-sdk/runtime/flutter/widget";
+import { Key } from "@hydro-sdk/hydro-sdk/runtime/flutter/foundation/key";
 
 class MyWidget extends StatelessWidget {
     private controller = new TextEditingController({ text: "Some convoluted but familiar functions" });
