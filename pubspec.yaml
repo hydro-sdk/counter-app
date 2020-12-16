@@ -4,10 +4,10 @@ version: "1.0.0+1"
 dependencies: 
   cupertino_icons: "^0.1.2"
   flutter: 
-    sdk: "flutter"
+    sdk: flutter
   hydro_sdk: 
     git: 
-      ref: "0.0.1-nightly.37"
+      ref: "0.0.1-nightly.38"
       url: "git://github.com/hydro-sdk/hydro-sdk.git"
   waveform: 
     git: 
@@ -15,7 +15,7 @@ dependencies:
       url: "git://github.com/hydro-sdk/waveform.git"
 dev_dependencies: 
   flutter_test: 
-    sdk: "flutter"
+    sdk: flutter
 environment: 
   sdk: ">=2.1.0 <3.0.0"
 flutter: 
