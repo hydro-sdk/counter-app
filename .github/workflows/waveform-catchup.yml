@@ -54,7 +54,10 @@ jobs:
         working-directory: hydro
 
       - name: Fetch
-        run: git fetch --all --tags
+        run: |
+          git fetch --all --tags
+          git checkout master
+          git pull
         working-directory: hydro
 
       - name: Configure Git Identity
