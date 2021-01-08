@@ -1,7 +1,8 @@
 name: Waveform Catchup
 on:
-  schedule:
-    - cron: "*/120 * * * *"
+  push:
+    branches:
+      - master
 
 jobs:
   build:
