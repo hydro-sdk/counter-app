@@ -40,37 +40,32 @@ jobs:
       - name: Run Flutter doctor
         run: flutter doctor -v
 
-      - name: Clone Hydro-SDK
-        uses: actions/checkout@v2
-        with:
-          path: "hydro"
-
-      - name: Get packages for Hydro-SDK JS
-        run: npm install
-        working-directory: hydro
-
-      - name: Get packages for Hydro-SDK Dart
-        run: flutter pub get
-        working-directory: hydro
+      - name: Configure and Clone
+        env:
+          PUBLISH_EMAIL: ${{secrets.PUBLISH_EMAIL}}
+          PUBLISH_USERNAME: ${{secrets.PUBLISH_USERNAME}}
+          WAVEFORM_BOT_PAT: ${{secrets.WAVEFORM_BOT_PAT}}
+        run: |
+          git config --global user.email "$PUBLISH_EMAIL"
+          git config --global user.name "$PUBLISH_USERNAME"
+          git clone https://$PUBLISH_USERNAME:$WAVEFORM_BOT_PAT@github.com/hydro-sdk/hydro_demo.git
 
       - name: Fetch
         run: |
           git fetch --all --tags
-          git fetch --unshallow
           git checkout master
           git pull
-        working-directory: hydro
+        working-directory: hydro_demo
 
-      - name: Configure Git Identity
-        env:
-          PUBLISH_EMAIL: ${{secrets.PUBLISH_EMAIL}}
-          PUBLISH_USERNAME: ${{secrets.PUBLISH_USERNAME}}
-        run: |
-          git config --global user.email "$PUBLISH_EMAIL"
-          git config --global user.name "$PUBLISH_USERNAME"
-        working-directory: hydro
+      - name: Get packages for Hydro-SDK JS
+        run: npm install
+        working-directory: hydro_demo
+
+      - name: Get packages for Hydro-SDK Dart
+        run: flutter pub get
+        working-directory: hydro_demo
 
       - name: Catchup Waveform PRs
         run: |
           flutter pub run waveform:catchUpAuthoredTopicBranches --org=hydro-sdk --repo=hydro_demo --author=waveform-bot
-        working-directory: hydro
+        working-directory: hydro_demo
