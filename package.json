@@ -11,6 +11,6 @@
   "devDependencies": {},
   "dependencies": {
     "@hydro-sdk/waveform": "0.0.1-nightly.22",
-    "@hydro-sdk/hydro-sdk": "0.0.1-nightly.102"
+    "@hydro-sdk/hydro-sdk": "0.0.1-nightly.104"
   }
 }
