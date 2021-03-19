@@ -65,6 +65,10 @@ jobs:
         run: flutter pub get
         working-directory: hydro_demo
 
+      - name: Reset Working Tree
+        run: get reset --hard
+        working-directory: hydro_demo
+
       - name: Catchup Waveform PRs
         run: |
           flutter pub run waveform:catchUpAuthoredTopicBranches --org=hydro-sdk --repo=hydro_demo --author=waveform-bot
