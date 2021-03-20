@@ -15,6 +15,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.40.6"
+  archive:
+    dependency: transitive
+    description:
+      name: archive
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.13"
   args:
     dependency: transitive
     description:
@@ -274,8 +281,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "0.0.1-nightly.156"
-      resolved-ref: "6ad047cbbd7c9ce86759cef316cbebde7906e727"
+      ref: "0.0.1-nightly.157"
+      resolved-ref: "57e3c304decbf93907159787f4fa60e983a8e787"
       url: "git://github.com/hydro-sdk/hydro-sdk.git"
     source: git
     version: "1.0.0+1"
@@ -391,6 +398,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.0"
+  progress_bar:
+    dependency: transitive
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "02418df30856afa247bc075ed7788c5367950d5b"
+      url: "git://github.com/hydro-sdk/progress_bar"
+    source: git
+    version: "0.2.0"
   pub_semver:
     dependency: transitive
     description:
