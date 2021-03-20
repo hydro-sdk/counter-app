@@ -281,8 +281,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "0.0.1-nightly.157"
-      resolved-ref: "57e3c304decbf93907159787f4fa60e983a8e787"
+      ref: "0.0.1-nightly.158"
+      resolved-ref: "256225acb305e8ff3abf52e1737c0c568347a186"
       url: "git://github.com/hydro-sdk/hydro-sdk.git"
     source: git
     version: "1.0.0+1"
