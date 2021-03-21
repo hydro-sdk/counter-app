@@ -1,0 +1,14 @@
+{
+    "project": "example-project",
+    "components": [
+        {
+            "name": "counter-example",
+            "chunks": [
+                {
+                    "type": "mountable",
+                    "entryPoint": "ota/index.ts"
+                }
+            ]
+        }
+    ]
+}
