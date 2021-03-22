@@ -6,6 +6,7 @@
             "chunks": [
                 {
                     "type": "mountable",
+                    "baseUrl": "ota",
                     "entryPoint": "ota/index.ts"
                 }
             ]
