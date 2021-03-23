@@ -57,10 +57,12 @@ jobs:
     - name: Get packages for Hydro Demo
       run: npm install
       working-directory: hydro_demo
-    - name: Build hello-world.ts
-      run: npx hydroc ts2hc --entry-point ota/hello-world.ts --module-name hello-world --out-dir assets --profile debug
+
+    - name: Build Project
+      run: npx hydroc build --out-dir assets/ota --profile debug
       working-directory: hydro_demo
-    - name: Test hello-world.ts
+
+    - name: Test 
       run: flutter test
       working-directory: hydro_demo
 
