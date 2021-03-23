@@ -1,4 +1,5 @@
 # Hydro Counter app
+![Action Gif](https://github.com/hydro-sdk/hydro_demo/blob/master/media/action-gif.gif)
 
 This repository is an example use of Hydro-SDK.
 
