@@ -39,3 +39,5 @@ lib/generated_plugin_registrant.dart
 
 node_modules
 .hydroc
+assets/**/*.ota
+assets/**/*.ota.sha256
