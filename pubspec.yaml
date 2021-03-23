@@ -19,7 +19,4 @@ dev_dependencies:
 environment: 
   sdk: ">=2.1.0 <3.0.0"
 flutter: 
-  assets: 
-    - "assets/hello-world.hc"
-    - "assets/hello-world.hc.symbols"
   uses-material-design: true
