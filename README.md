@@ -31,7 +31,7 @@ npx hydroc build --out-dir assets/ota --profile debug
 ```
 
 If this is the first time using a specific version of Hydro-SDK in a directory, `hydroc` will first download SDK-tools needed for your platform. The project described by `hydro.json` will then be built.  
-![Output](https://github.com/hydro-sdk/hydro_demo/master/media/console-output.png)
+![Output](https://github.com/hydro-sdk/hydro_demo/blob/master/media/console-output.png)
 
 The `.ota` file output to `assets/ota` can be tested using the given widget test in `test` by running `flutter test`.
 
