@@ -1,4 +1,4 @@
-name: Build and Test
+name: Debug Mode Build and Test
 
 on: [push, pull_request]
 
@@ -59,7 +59,7 @@ jobs:
       working-directory: hydro_demo
 
     - name: Build Project
-      run: npx hydroc build --out-dir assets/ota --profile debug
+      run: npx hydroc build --out-dir assets/ota --profile release
       working-directory: hydro_demo
 
     - name: Test 
