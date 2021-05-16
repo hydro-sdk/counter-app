@@ -41,3 +41,6 @@ node_modules
 .hydroc
 assets/**/*.ota
 assets/**/*.ota.sha256
+
+package-lock.json
+pubspec.lock
