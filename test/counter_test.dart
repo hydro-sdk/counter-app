@@ -7,7 +7,7 @@ void main() {
   testWidgets('counter smoke test', (WidgetTester tester) async {
     await tester.pumpWidget(const RunComponentFromFile(
       component: "counter-example",
-      path: "../assets/ota/counter-example.ota",
+      path: "assets/ota/counter-example.ota",
     ));
 
     await tester.pumpAndSettle();
