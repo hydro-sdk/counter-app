@@ -8,7 +8,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "@hydro-sdk/waveform": "0.0.1-nightly.35",
+    "@hydro-sdk/waveform": "0.0.1-nightly.38",
     "@hydro-sdk/hydro-sdk": "0.0.1-nightly.246"
   }
 }
