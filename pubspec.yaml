@@ -1,19 +1,19 @@
-description: "A new Flutter project."
-name: "hydro_demo"
-version: "1.0.0+1"
+description: A new Flutter project.
+name: hydro_demo
+version: 1.0.0+1
 dependencies: 
-  cupertino_icons: "^1.0.3"
+  cupertino_icons: ^1.0.3
   flutter: 
     sdk: flutter
   hydro_sdk: 
     git: 
-      ref: "0.0.1-nightly.249"
-      url: "git://github.com/hydro-sdk/hydro-sdk.git"
+      url: git://github.com/hydro-sdk/hydro-sdk.git
+      ref: 0.0.1-nightly.253
   waveform: 0.0.1-nightly.43
 dev_dependencies: 
   flutter_test: 
     sdk: flutter
 environment: 
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.1.0 <3.0.0'
 flutter: 
   uses-material-design: true
