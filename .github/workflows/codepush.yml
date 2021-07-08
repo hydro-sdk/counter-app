@@ -1,0 +1,75 @@
+name: Debug Mode Build and Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macOS-10.15, windows-2019, ubuntu-18.04]
+        include: 
+        - os: macOS-10.15
+          TARGET: macos  
+        - os: ubuntu-18.04
+          TARGET: linux     
+        - os: windows-2019
+          TARGET: windows
+      fail-fast: false
+
+    steps:
+    - name: Install Linux dependencies
+      if: startsWith(matrix.os, 'ubuntu')
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libgtk-3-dev libx11-dev pkg-config libreadline-dev
+    
+    - name: Clone Flutter repository with stable channel
+      uses: actions/checkout@v2
+      with:
+        repository: 'flutter/flutter'
+        ref: '2.0.5'
+        path: 'flutter'
+        fetch-depth: 0
+
+    - name: Add Flutter to the PATH for Unix
+      run: echo "$GITHUB_WORKSPACE/flutter/bin" >> $GITHUB_PATH
+      if : runner.os != 'Windows'
+
+    - name: Add Flutter to the PATH for Windows
+      run: echo "${env:GITHUB_WORKSPACE}\flutter\bin" >> ${env:GITHUB_PATH}
+      if: runner.os == 'Windows'
+
+    - name: Add Dart to the PATH for Unix
+      run: echo "$GITHUB_WORKSPACE/flutter/bin/cache/dart-sdk/bin" >> $GITHUB_PATH
+      if: runner.os != 'Windows'
+
+    - name: Add Dart to the PATH for Windows
+      run: echo "${env:GITHUB_WORKSPACE}\flutter\bin\cache\dart-sdk\bin" >> ${env:GITHUB_PATH}
+      if: runner.os == 'Windows'
+
+    - name: Run Flutter doctor
+      run: flutter doctor -v
+
+    - name: Node and NPM Versions
+      run: node -v && npm -v
+
+    - name: Clone Hydro Demo
+      uses: actions/checkout@v2
+      with:
+        path: 'hydro_demo'
+
+    - name: Get packages for Hydro Demo
+      run: npm install
+      working-directory: hydro_demo
+
+    - name: Write Key
+      run: cat ${{ secrets.REGISTRY_TEST_SCHEME }} > key.pem
+      working-directory: hydro_demo
+
+    - name: Codepush
+      run: npx hydroc codepush --registry-scheme ${{ secrets.REGISTRY_TEST_SCHEME }} --registry-host REGISTRY_TEST_HOST=${{ secrets.REGISTRY_TEST_HOST }} --private-key-file key.pem
+      working-directory: hydro_demo

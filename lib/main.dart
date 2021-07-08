@@ -4,5 +4,7 @@ import 'package:flutter/material.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const RunComponent(
-      project: "example-project", component: "counter-example"));
+    project: "hydro-sdk",
+    component: "counter-app",
+  ));
 }

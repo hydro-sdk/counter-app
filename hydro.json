@@ -1,8 +1,8 @@
 {
-    "project": "example-project",
+    "project": "hydro-sdk",
     "components": [
         {
-            "name": "counter-example",
+            "name": "counter-app",
             "chunks": [
                 {
                     "type": "mountable",
