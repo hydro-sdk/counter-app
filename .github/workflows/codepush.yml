@@ -1,4 +1,4 @@
-name: Debug Mode Build and Test
+name: Codepush
 
 on:
   push:
