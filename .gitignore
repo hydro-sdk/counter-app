@@ -44,3 +44,4 @@ assets/**/*.ota.sha256
 
 package-lock.json
 pubspec.lock
+key.pem
