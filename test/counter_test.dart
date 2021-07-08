@@ -6,8 +6,8 @@ void main() {
   LiveTestWidgetsFlutterBinding();
   testWidgets('counter smoke test', (WidgetTester tester) async {
     await tester.pumpWidget(const RunComponentFromFile(
-      component: "counter-example",
-      path: "assets/ota/counter-example.ota",
+      component: "counter-app",
+      path: "assets/ota/counter-app.ota",
     ));
 
     await tester.pumpAndSettle();
