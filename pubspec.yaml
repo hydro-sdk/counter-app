@@ -1,6 +1,8 @@
 description: A new Flutter project.
 name: hydro_demo
-version: 1.0.0+1
+version: 0.0.1
+publish_to: none
+
 dependencies: 
   cupertino_icons: ^1.0.3
   flutter: 
