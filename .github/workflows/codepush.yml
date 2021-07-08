@@ -70,5 +70,5 @@ jobs:
       working-directory: hydro_demo
 
     - name: Codepush
-      run: npx hydroc codepush --registry-scheme ${{ secrets.REGISTRY_TEST_SCHEME }} --registry-host REGISTRY_TEST_HOST=${{ secrets.REGISTRY_TEST_HOST }} --private-key-file key.pem --readme README.MD
+      run: npx hydroc codepush --registry-scheme ${{ secrets.REGISTRY_TEST_SCHEME }} --registry-host REGISTRY_TEST_HOST=${{ secrets.REGISTRY_TEST_HOST }} --private-key-file key.pem --readme README.md
       working-directory: hydro_demo
