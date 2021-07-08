@@ -7,5 +7,9 @@ void main() {
   runApp(const RunComponent(
     project: "hydro-sdk",
     component: "counter-app",
+    registryApi: const RegistryApi(
+      scheme: "https",
+      host: "hydro-reservoir.herokuapp.com",
+    ),
   ));
 }
