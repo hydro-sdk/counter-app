@@ -59,7 +59,9 @@ jobs:
         path: 'hydro_demo'
 
     - name: Get packages for Hydro Demo
-      run: npm install
+      run: |
+        npm install
+        flutter pub get
       working-directory: hydro_demo
 
     - name: Write Key
