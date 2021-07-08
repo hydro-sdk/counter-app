@@ -45,3 +45,4 @@ assets/**/*.ota.sha256
 package-lock.json
 pubspec.lock
 key.pem
+android/app/counter_app.jks
