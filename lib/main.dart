@@ -1,3 +1,4 @@
+import 'package:hydro_sdk/registry/registryApi.dart';
 import 'package:hydro_sdk/runComponent/runComponent.dart';
 import 'package:flutter/material.dart';
 
@@ -6,5 +7,9 @@ void main() {
   runApp(const RunComponent(
     project: "hydro-sdk",
     component: "counter-app",
+    registryApi: const RegistryApi(
+      scheme: "https",
+      host: "hydro-reservoir.herokuapp.com",
+    ),
   ));
 }
