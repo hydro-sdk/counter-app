@@ -63,10 +63,10 @@ jobs:
       working-directory: hydro_demo
 
     - name: Write Key
-      run: 'echo "$REGISTRY_TEST_SCHEME" > key.pem'
+      run: 'echo "$COUNTER_APP_REGISTRY_PRIVATE_KEY" > key.pem'
       shell: bash
       env:
-        REGISTRY_TEST_SCHEME: ${{ secrets.REGISTRY_TEST_SCHEME }}
+        COUNTER_APP_REGISTRY_PRIVATE_KEY: ${{ secrets.COUNTER_APP_REGISTRY_PRIVATE_KEY }}
       working-directory: hydro_demo
 
     - name: Codepush
