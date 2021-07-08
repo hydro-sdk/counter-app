@@ -1,4 +1,4 @@
-package com.example.hydro_demo
+package com.hydro_sdk.counter_app
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
