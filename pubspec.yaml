@@ -2,7 +2,6 @@ description: A new Flutter project.
 name: hydro_demo
 version: 0.0.1
 publish_to: none
-
 dependencies: 
   cupertino_icons: ^1.0.3
   flutter: 
@@ -10,7 +9,7 @@ dependencies:
   hydro_sdk: 
     git: 
       url: git://github.com/hydro-sdk/hydro-sdk.git
-      ref: 0.0.1-nightly.269
+      ref: 0.0.1-nightly.277
   waveform: 0.0.1-nightly.43
 dev_dependencies: 
   flutter_test: 
